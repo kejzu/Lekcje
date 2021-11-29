@@ -7,13 +7,35 @@ public class Stringus {
     Stringus(){
         System.out.println("Podaj Stringa: ");
         napis=getString();
+
+        System.out.println("Liczba znakow: "+policzZnaki());
+        System.out.println(" ");
+        System.out.println("Liczba bialych znakow: "+policzBialeZnaki());
+        System.out.println(" ");
+        System.out.println("Liczba znakow bez znakow bialych: "+policzZnakiBez());
+        System.out.println(" ");
+        pokazLiczby();
+        policzLitery();
+
+        zamienNaDuzeZnaki();
+        System.out.println(" Duze litery: "+napis);
+        zamienNaMaleZnaki();
+        System.out.println(" Male litery: "+napis);
     }
 
-    public int policzZnaki(){
+    private void zamienNaDuzeZnaki(){
+        napis=napis.toUpperCase();
+    }
+
+    private void zamienNaMaleZnaki(){
+        napis=napis.toLowerCase();
+    }
+
+    private int policzZnaki(){
         return napis.length();
     }
 
-    public int policzZnakiBez(){
+    private int policzZnakiBez(){
         int temp = 0;
         for (int i=0;i<napis.length();i++){
             if(napis.charAt(i)!=32 && napis.charAt(i)!=13){
@@ -23,7 +45,7 @@ public class Stringus {
         return temp;
     }
 
-    public void pokazLiczby(){
+    private void pokazLiczby(){
         System.out.println("Liczby, ktore wystapily w zdaniu:");
         boolean czy = false;
         for (int i=0;i<napis.length();i++){
@@ -39,7 +61,7 @@ public class Stringus {
         System.out.println(" ");
     }
 
-    public int policzBialeZnaki(){
+    private int policzBialeZnaki(){
         int temp = 0;
         for (int i=0;i<napis.length();i++){
             if(napis.charAt(i)==32 || napis.charAt(i)==13){
@@ -49,7 +71,7 @@ public class Stringus {
         return temp;
     }
 
-    public void policzLitery(){
+    private void policzLitery(){
         int[] wystapienia = new int[26];
         int poczatkowaMale=65;
         int poczatkowaDuze=97;
