@@ -4,4 +4,53 @@
     --bialy: #f2f3ae;
     --bronz: #392a16;
     --jasny-bronz: #634133;
+
+    --text-color: black;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    border: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--bialy);
+}
+
+.header img {
+    height: 100px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: var(--zolty);
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--bronz);
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+}
+
+section p{
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+section{
+    color: rgba(0, 0, 0,0.8);
+}
+
+footer{
+    background: linear-gradient(to right,var(--bronz),var(--jasny-bronz));
+    color: var(--bialy);
+    padding: 2rem;
 }
