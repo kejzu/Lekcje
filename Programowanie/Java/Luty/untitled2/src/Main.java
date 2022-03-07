@@ -1,9 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         Samochod car = new Samochod("Fiat","Punto",4,150,8.5);
-        System.out.println("Koszt jazdy 100km przy cenie 5zl za litr: "+ car.ObliczKosztPrzejazdu(100,5));
+        Samochod car2 = new Samochod("Volkswagen", "Passat",4,150, 8.9);
 
-        car.WypiszInfo();
-        car.wypisziloscSamochodow();
+        Garaz garaz = new Garaz("Dąbrowskiego 33", 3);
+
+        garaz.wprowadzSamochod(car);
+        garaz.wprowadzSamochod(car2);
+
+        garaz.wypiszInfo();
+
+        garaz.wyprowadzSamochod();
+
+        garaz.wypiszInfo();
     }
 }
