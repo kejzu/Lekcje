@@ -7,7 +7,7 @@ public class Main {
         SaveFile f = new SaveFile();
 
         f.saveFile(plikRW,"Umiem zapisywac");
-        f.saveFile("drugiPlik","dawdadawdwadadaw");
+        f.saveFile("drugiPlik","11111111111111111wadadaw");
 
         System.out.println("Odczyt pliku #1 " + plikRW);
         System.out.println(f.readFile(plikRW));
