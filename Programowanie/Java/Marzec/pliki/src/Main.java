@@ -2,9 +2,9 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String plikRW = "nowyPlik.txt";
+        String plikRW = "nowyPlik.txt";//potencjalny błąd: literówka/ złe rozszerzenie/ niedozwolone znaki
 
-        SaveFile f = new SaveFile();
+        SaveFile f = new SaveFile(); //potencjalny błąd: brak obiektu
 
         f.saveFile(plikRW,"Umiem zapisywac");
         f.saveFile("drugiPlik","11111111111111111wadadaw");
